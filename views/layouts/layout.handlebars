@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>login App</title>
+	<link rel="stylesheet" href="/css/bootstrap.css">
+	<link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/img/style.css">
+  <link rel="stylesheet" href="/css/animate.css">
+
+</head>
+<body>
+<div>
+<header>
+  <nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-1">
+        <span class="sr-only">Menu</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <a href="/users/home" class="navbar-brand">Bootstrap</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="navbar-1">
+      <ul class="nav navbar-nav  navbar-right">
+         {{#if user}}
+        <li role="presentation"><a href="/">Dashboard</a></li>
+        <li role="presentation"><a href="/users/logout">Logout</a></li>
+         {{else}}
+        <li><a href="/users/home">Home</a></li>
+        <li><a href="/users/services">Services</a></li>
+        <li><a href="/users/login">Login</a></li>
+        <li><a href="/users/register">Register</a></li>
+        <li><a href="/users/contact">Contact</a></li>
+         {{/if}}
+      </ul>
+    </div>
+
+  </div>    
+  </nav>
+</header>
+
+      <div class="row">
+        
+        <div class="col-lg-12">
+        <div class="col-lg-12">
+			{{#if success_msg}}
+			<div class="alert alert-success container">{{success_msg}}</div>
+			{{/if}}
+			{{#if error_msg}}
+			<div class="alert alert-danger container">{{error_msg}}</div>
+			{{/if}}
+			{{#if error}}
+			<div class="alert alert-danger container">{{error}}
+			</div>
+			{{/if}}
+        </div>
+        </div>
+        </div>
+    </div>
+    {{{body}}}
+    <footer class="footer">
+    <div class="foot1">
+        <p>&copy; 2017 LoginApp, Inc.</p>
+    </div>
+     <div class="foot2">
+          <ul>
+           <li><a href="https://www.facebook.com/daniel.fierro.torres" target="blank"><span class="icon-facebook2"></span></a></li>
+           <li><a href="https://twitter.com/fierro1308" target="blank"><span class="icon-twitter"></span></a></li> 
+           <li><a href="https://www.instagram.com/daniel_fierro13/?hl=en" target="blank"><span class="icon-instagram"></span></a></li>
+           <li><a href="https://plus.google.com/u/0/117138574359725307408" target="blank"><span class="icon-google-plus2"></span></a></li>
+         </ul>
+     </div>
+      </footer>
+
+      <script src="https://code.jquery.com/jquery-latest.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> 
+</body>
+</html>
